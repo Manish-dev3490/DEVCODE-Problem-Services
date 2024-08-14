@@ -7,6 +7,8 @@ const app=express();
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.text());
+
+// If any api comes to the route /api it will go to apiRouter
 app.use("/api",apiRouter);
 
 
