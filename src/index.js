@@ -1,12 +1,15 @@
-
 const express=require('express');
 const bodyparser=require('body-parser');
 const { PORT } = require('./Configs/Server-config');
+const apiRouter = require('./routes');
 const app=express();
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.text());
+
+// If any api comes to the route /api it will go to apiRouter
+app.use("/api",apiRouter);
 
 
 app.get("/",(req,res)=>{
