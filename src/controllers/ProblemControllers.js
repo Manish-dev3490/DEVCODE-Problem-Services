@@ -13,28 +13,44 @@ function addProblem(req, res, next) {
 }
 
 function getProblem(req, res, next) {
-    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-        msg: 'Not implemented'
-    });
+     try {
+        throw new notImplemented('getProblem');
+
+    }
+    catch (error){
+        next(error);
+    }
 }
 
 function getProblems(req, res, next) {
-    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-        msg: 'Not implemented'
-    });
+   try {
+        throw new notImplemented('getProblems');
+
+    }
+    catch (error){
+        next(error);
+    }
 }
 
 
 function deleteProblem(req, res, next) {
-    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-        msg: 'Not implemented'
-    });
+    try {
+        throw new notImplemented('deleteProblem');
+
+    }
+    catch (error){
+        next(error);
+    }
 }
 
 function updateProblem(req, res, next) {
-    return res.status(StatusCodes.NOT_IMPLEMENTED).json({
-        msg: 'Not implemented'
-    });
+     try {
+        throw new notImplemented('updateProblem');
+
+    }
+    catch (error){
+        next(error);
+    }
 }
 function pingcontrollercheck(req, res) {
     res.json({ msg: "ping controller check is working " });
